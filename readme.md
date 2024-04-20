@@ -1,4 +1,4 @@
-# apacke-php-dev docker image
+# apache-php-dev docker image
 
 ## Disclaimer
 
