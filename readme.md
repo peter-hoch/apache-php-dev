@@ -3,8 +3,8 @@
 ## Disclaimer
 
 The image is for development and education only.  
-The configuration is unsecure in order to enable deugging etc.  
-Do NOT connect to the internet!.  
+The configuration is unsecure in order to enable debugging etc.  
+Do NOT connect to the internet!  
 Use only in a safe sandboxed environment!  
 
 ## Debugging PHP 
