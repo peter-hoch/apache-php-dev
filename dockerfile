@@ -2,10 +2,10 @@ FROM php:8.0.20-apache
 
 
 RUN apt-get update && apt-get install -y net-tools vim curl iputils-ping wget curl iproute2 ssl-cert python3.9 pip && \
-    docker-php-ext-install mysqli
+    docker-php-ext-install mysqli sockets
 
 RUN pecl install xdebug-3.2.1 
-RUN docker-php-ext-enable xdebug
+RUN docker-php-ext-enable xdebug sockets
 
 RUN a2enmod rewrite && a2enmod ssl && a2enmod socache_shmcb && a2ensite default-ssl.conf && \
     a2enmod auth_basic auth_digest authn_file authn_dbd 
