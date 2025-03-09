@@ -21,3 +21,9 @@ COPY ./credstore/* /etc/apache2/credstore/
 COPY ./php.ini /usr/local/etc/php/php.ini
 COPY ./html/ /var/www/html/
 COPY ./sites/ /etc/apache2/sites-available/
+
+RUN mkdir /etc/apache2/apache-config && \
+    mv /etc/apache2/apache2.conf /etc/apache2/apache-config && \
+    ln -s /etc/apache2/apache-config/apache2.conf /etc/apache2/apache2.conf
+
+    
