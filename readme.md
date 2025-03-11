@@ -10,6 +10,7 @@ Use only in a safe sandboxed environment!
 ## Debugging PHP 
 
 XDebug is installed and enabled  
+xdebug.discover_client_host is activated - most convenient **but most insecure**  
 
 ## Authentication and Authorization
 

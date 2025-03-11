@@ -1,0 +1,6 @@
+root@63f395c32244:/var/www/html# cd /tmp
+root@63f395c32244:/tmp# wget https://xdebug.org/files/xdebug-3.4.2.tgz
+
+tar -xvzf xdebug-3.4.2.tgz
+
+cd xdebug-3.4.2
