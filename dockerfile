@@ -1,11 +1,13 @@
-FROM php:8.0.20-apache
+FROM php:8.2.30-apache
 
 
-RUN apt-get update && apt-get install -y net-tools vim curl iputils-ping wget curl iproute2 ssl-cert python3.9 pip && \
-    docker-php-ext-install mysqli sockets
+RUN apt-get update 
 
-RUN pecl install xdebug-3.4.2
-RUN docker-php-ext-enable xdebug sockets
+RUN apt-get install -y net-tools vim curl iputils-ping wget curl iproute2 ssl-cert python3.13 pip git unzip && \
+    docker-php-ext-install mysqli sockets && \
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+    pecl install xdebug-3.4.2 && \
+    docker-php-ext-enable xdebug sockets
 
 RUN a2enmod rewrite && a2enmod ssl && a2enmod socache_shmcb && a2ensite default-ssl.conf && \
     a2enmod auth_basic auth_digest authn_file authn_dbd 

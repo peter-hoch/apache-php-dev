@@ -9,14 +9,18 @@ Use only in a safe sandboxed environment!
 
 ## Start with
 
+map current dir to /app
+
 ```bash
-# map current to /app
 docker run --rm --name apache-php-dev -it -v `pwd`:/app -p 80:80 -p 443:443 petersdockerid0815/apache-php-dev
-
-# map current as html root
-docker run --rm --name apache-php-dev -it -v `pwd`:/var/www/html -p 80:80 -p 443:443 petersdockerid0815/apache-php-dev
-
 ```
+
+map current dir as html root
+
+```bash
+docker run --rm --name apache-php-dev -it -v `pwd`:/var/www/html -p 80:80 -p 443:443 petersdockerid0815/apache-php-dev
+```
+
 ## Debugging PHP 
 
 XDebug is installed and enabled  
