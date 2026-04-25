@@ -7,6 +7,16 @@ The configuration is unsecure in order to enable debugging etc.
 Do NOT connect to the internet!  
 Use only in a safe sandboxed environment!  
 
+## Start with
+
+```bash
+# map current to /app
+docker run --rm --name apache-php-dev -it -v `pwd`:/app -p 80:80 -p 443:443 petersdockerid0815/apache-php-dev
+
+# map current as html root
+docker run --rm --name apache-php-dev -it -v `pwd`:/var/www/html -p 80:80 -p 443:443 petersdockerid0815/apache-php-dev
+
+```
 ## Debugging PHP 
 
 XDebug is installed and enabled  
